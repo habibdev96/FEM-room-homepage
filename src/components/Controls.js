@@ -27,13 +27,13 @@ const Container = styled.div`
   }
 `;
 
-const Controls = () => {
+const Controls = ({ index, setIndex }) => {
   return (
     <Container>
-      <button className="control-btn">
+      <button className="control-btn" onClick={() => setIndex(index - 1)}>
         <FaChevronLeft className="control-icon" />
       </button>
-      <button className="control-btn">
+      <button className="control-btn" onClick={() => setIndex(index + 1)}>
         <FaChevronRight className="control-icon" />
       </button>
     </Container>
