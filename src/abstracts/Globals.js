@@ -6,13 +6,12 @@ const Globals = createGlobalStyle`
     --black: #222;
     --white: #fff;
     /* primary */
-    --darkGray: hsl(0, 0%, 63%),
-    --veryDarkGray: hsl(0, 0%, 27%),
+    --darkGray: hsl(0, 0%, 63%);
+    --veryDarkGray: hsl(0, 0%, 27%);
     /* radius */
     --mainRadius: 5rem;
     /* shadows */
     --mainShadow: 0.1rem 0.3rem 1rem rgba(0, 0, 0, .2);
-    --activeShadow: 0.1rem 0.3rem 1rem hsla(12, 88%, 59%, .5);
     /* transitions */
     --mainTransition: all 0.3s ease-in-out;
     /* font sizes */
