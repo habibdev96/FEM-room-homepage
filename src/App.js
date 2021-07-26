@@ -1,6 +1,7 @@
 import Globals from "./abstracts/Globals";
 import Showcase from "./components/Showcase";
 import About from "./components/About";
+import Tag from "./components/Tag";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         <Showcase />
         <About />
       </main>
+      <Tag />
     </>
   );
 };
