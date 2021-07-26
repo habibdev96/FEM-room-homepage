@@ -13,6 +13,12 @@ const Container = styled.div`
     border: 0;
     background-color: var(--black);
     padding: 3rem;
+    transition: var(--mainTransition);
+
+    &:hover,
+    &:focus {
+      background-color: var(--veryDarkGray);
+    }
   }
 
   .control-icon {

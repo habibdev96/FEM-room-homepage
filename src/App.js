@@ -6,8 +6,10 @@ const App = () => {
   return (
     <>
       <Globals />
-      <Showcase />
-      <About />
+      <main>
+        <Showcase />
+        <About />
+      </main>
     </>
   );
 };

@@ -8,17 +8,31 @@ const Container = styled.a`
   gap: 3rem;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    .cta-link {
+      margin-right: 1rem;
+    }
+
+    .cta-link,
+    .cta-icon {
+      color: var(--darkGray);
+    }
+  }
+
   .cta-link {
     ${textStyles}
     text-transform: uppercase;
     color: var(--veryDarkGray);
     font-size: var(--xs);
     letter-spacing: 1rem;
+    transition: var(--mainTransition);
   }
 
   .cta-icon {
     color: var(--veryDarkGray);
     font-size: var(--xs);
+    transition: var(--mainTransition);
   }
 `;
 
