@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import logo from "../images/logo.svg";
 import NavLink from "./NavLink";
+import Responsive from "../abstracts/Responsive";
 
 const Nav = styled.nav`
   position: absolute;
   padding: 5rem;
   z-index: 500;
+
+  ${Responsive.xs`
+    padding: 2rem;
+  `}
 `;
 
 const Container = styled.div`
@@ -20,6 +25,10 @@ const Container = styled.div`
   .nav-list {
     display: flex;
     gap: 5rem;
+
+    ${Responsive.xl`
+      display: none;
+    `}
   }
 `;
 

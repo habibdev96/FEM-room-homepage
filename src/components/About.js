@@ -2,12 +2,20 @@ import styled from "styled-components";
 import aboutImageDark from "../images/image-about-dark.jpg";
 import aboutImageLight from "../images/image-about-light.jpg";
 import { headingStyles, textStyles } from "../abstracts/Mixins";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: -4px;
   align-items: center;
+
+  ${Responsive.lg`
+    grid-template-columns: 1fr 1.5fr 1fr;
+  `}
+
+  ${Responsive.md`
+    grid-template-columns: 1fr;
+  `}
 
   .about-img {
     width: 100%;
@@ -24,6 +32,10 @@ const Container = styled.div`
     color: var(--veryDarkGray);
     font-size: var(--xl);
     margin-bottom: 3rem;
+
+    ${Responsive.md`
+      font-size: var(--lg);
+    `}
   }
 
   .about-desc {

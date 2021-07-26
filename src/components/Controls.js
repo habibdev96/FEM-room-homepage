@@ -1,12 +1,23 @@
 import styled from "styled-components";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
   left: 0;
-  bottom: 0.3rem;
+  bottom: 0;
+
+  ${Responsive.md`
+  top: -120%;
+  left: 0;
+  `}
+
+  ${Responsive.xs`
+  top: -110%;
+  left: 0;
+  `}
 
   .control-btn {
     outline: 0;
@@ -14,6 +25,10 @@ const Container = styled.div`
     background-color: var(--black);
     padding: 3rem;
     transition: var(--mainTransition);
+
+    ${Responsive.xs`
+    padding: 1.5rem;  
+    `}
 
     &:hover,
     &:focus {

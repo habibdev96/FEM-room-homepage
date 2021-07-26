@@ -5,14 +5,29 @@ import Navbar from "./Navbar";
 import Controls from "./Controls";
 import Cta from "./Cta";
 import showcaseData from "../data";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   align-items: center;
+  overflow-x: hidden;
+
+  ${Responsive.xl`
+  grid-template-columns: repeat(2, 1fr); 
+  `}
+
+  ${Responsive.md`
+    grid-template-columns: 1fr;
+  `}
+
+  .hero {
+    height: 100%;
+  }
 
   .hero-img {
     pointer-events: none;
+    height: 100%;
   }
 
   .info {
@@ -22,12 +37,24 @@ const Container = styled.div`
 
   .info-content {
     padding: 15rem 10rem;
+
+    ${Responsive.xl`
+    padding: 15rem 5rem;     
+    `}
+
+    ${Responsive.md`
+    padding: 5rem;     
+    `}
   }
 
   .info-title {
     ${headingStyles}
     font-size: 5rem;
     color: var(--veryDarkGray);
+
+    ${Responsive.sm`
+    font-size: var(--lg);
+    `}
   }
 
   .info-lead {
@@ -39,6 +66,7 @@ const Container = styled.div`
 
   .img-container {
     overflow: hidden;
+    height: 100%;
   }
 
   .info-content.activeSlide,

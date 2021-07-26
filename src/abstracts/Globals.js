@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import Responsive from "./Responsive";
 
 const Globals = createGlobalStyle`
   :root {
@@ -34,6 +35,10 @@ const Globals = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+
+    ${Responsive.xs`
+      font-size: 55.5%;
+    `}
   }
 
   body {
