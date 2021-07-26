@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import desktopHeroOne from "../images/desktop-image-hero-1.jpg";
 import { headingStyles, textStyles } from "../abstracts/Mixins";
+import Navbar from "./Navbar";
 import Controls from "./Controls";
 import Cta from "./Cta";
 
@@ -9,6 +10,10 @@ const Container = styled.div`
   grid-template-columns: 1.5fr 1fr;
   align-items: center;
   min-height: 50vh;
+
+  .hero-img {
+    pointer-events: none;
+  }
 
   .info {
     position: relative;
@@ -38,6 +43,7 @@ const Showcase = () => {
     <section>
       <Container>
         <div className="hero">
+          <Navbar />
           <img className="hero-img" src={desktopHeroOne} alt="hero" />
         </div>
         <div className="info">
