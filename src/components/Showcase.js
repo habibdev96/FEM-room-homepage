@@ -10,7 +10,6 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   align-items: center;
-  min-height: 50vh;
 
   .hero-img {
     pointer-events: none;
@@ -38,23 +37,39 @@ const Container = styled.div`
     padding: 4rem 0;
   }
 
+  .img-container {
+    overflow: hidden;
+  }
+
   .info-content.activeSlide,
   .img-container.activeSlide {
     opacity: 1;
-    transition: var(--mainTransition);
     display: block;
+    animation: fadeIn 1s linear;
   }
 
   .info-content.lastSlide,
   .img-container.lastSlide {
     opacity: 0;
     display: none;
+    visibility: hidden;
   }
 
   .info-content.nextSlide,
   .img-container.nextSlide {
     opacity: 0;
     display: none;
+    visibility: hidden;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 `;
 
@@ -76,7 +91,7 @@ const Showcase = () => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
-    }, 9000);
+    }, 15000);
     return () => {
       clearInterval(slider);
     };

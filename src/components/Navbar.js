@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 const Nav = styled.nav`
   position: absolute;
   padding: 5rem;
+  z-index: 500;
 `;
 
 const Container = styled.div`
