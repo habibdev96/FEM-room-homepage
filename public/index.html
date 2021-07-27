@@ -17,10 +17,92 @@
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* preloader styles */
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: grid;
+        place-items: center;
+        visibility: visible;
+        z-index: 2000;
+        transition: 0.5s ease-in-out;
+        opacity: 1;
+      }
+
+      .preloader__spinner {
+        width: 250px;
+        height: 250px;
+        position: relative;
+      }
+
+      .preloader__half-circle {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 10px dashed transparent;
+        border-top-color: hsl(0, 0%, 63%);
+        border-radius: 50%;
+        animation: spinnerOne 1.5s linear infinite;
+      }
+
+      .preloader__half-circle:nth-child(2) {
+        border: 10px dashed transparent;
+        border-bottom-color: hsl(0, 0%, 63%);
+        animation: spinnerTwo 1.5s linear infinite;
+      }
+
+      @keyframes spinnerOne {
+        0% {
+          transform: rotate(0deg);
+          border-width: 10px;
+        }
+
+        50% {
+          transform: rotate(180deg);
+          border-width: 1px;
+        }
+
+        100% {
+          transform: rotate(360deg);
+          border-width: 10px;
+        }
+      }
+
+      @keyframes spinnerTwo {
+        0% {
+          transform: rotate(0deg);
+          border-width: 1px;
+        }
+
+        50% {
+          transform: rotate(180deg);
+          border-width: 10px;
+        }
+
+        100% {
+          transform: rotate(360deg);
+          border-width: 1px;
+        }
+      }
+    </style>
     <title>Frontend Mentor | Room Homepage</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <!-- preloader -->
+      <div class="preloader">
+        <div class="preloader__spinner">
+          <div class="preloader__half-circle"></div>
+          <div class="preloader__half-circle"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
