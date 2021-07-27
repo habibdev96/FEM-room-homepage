@@ -1,15 +1,18 @@
+import { useState } from "react";
 import styled from "styled-components";
 import logo from "../images/logo.svg";
 import NavLink from "./NavLink";
 import Responsive from "../abstracts/Responsive";
+import MobileMenuToggle from "./MobileMenuToggle";
 
 const Nav = styled.nav`
   position: absolute;
   padding: 5rem;
   z-index: 500;
 
-  ${Responsive.xs`
+  ${Responsive.sm`
     padding: 2rem;
+    width: 100%;
   `}
 `;
 
@@ -17,6 +20,14 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 5rem;
+
+  ${Responsive.xl`
+    flex-direction: column;
+  `}
+
+  ${Responsive.md`
+    flex-direction: row;
+  `}
 
   .nav-logo {
     width: 10rem;
@@ -27,12 +38,22 @@ const Container = styled.div`
     gap: 5rem;
 
     ${Responsive.xl`
+      flex-direction: column
+    `}
+
+    ${Responsive.md`
+      flex-direction: row;
+    `}
+
+    ${Responsive.sm`
       display: none;
     `}
   }
 `;
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <Nav>
       <Container>
@@ -43,6 +64,7 @@ const Navbar = () => {
           <NavLink text="about" />
           <NavLink text="contact" />
         </ul>
+        <MobileMenuToggle isActive={isActive} setIsActive={setIsActive} />
       </Container>
     </Nav>
   );

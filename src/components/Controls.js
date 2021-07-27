@@ -10,13 +10,13 @@ const Container = styled.div`
   bottom: 0;
 
   ${Responsive.md`
-  top: -120%;
-  left: 0;
+    top: -120%;
+    left: 0;
   `}
 
-  ${Responsive.xs`
-  top: -110%;
-  left: 0;
+  ${Responsive.sm`
+    top: -111%;
+    left: 0;
   `}
 
   .control-btn {
@@ -26,8 +26,8 @@ const Container = styled.div`
     padding: 3rem;
     transition: var(--mainTransition);
 
-    ${Responsive.xs`
-    padding: 1.5rem;  
+    ${Responsive.sm`
+      padding: 1.5rem;  
     `}
 
     &:hover,

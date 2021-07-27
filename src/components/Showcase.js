@@ -14,7 +14,7 @@ const Container = styled.div`
   overflow-x: hidden;
 
   ${Responsive.xl`
-  grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
   `}
 
   ${Responsive.md`
@@ -39,11 +39,11 @@ const Container = styled.div`
     padding: 15rem 10rem;
 
     ${Responsive.xl`
-    padding: 15rem 5rem;     
+      padding: 15rem 5rem;     
     `}
 
     ${Responsive.md`
-    padding: 5rem;     
+      padding: 5rem;     
     `}
   }
 
@@ -53,7 +53,7 @@ const Container = styled.div`
     color: var(--veryDarkGray);
 
     ${Responsive.sm`
-    font-size: var(--lg);
+      font-size: var(--lg);
     `}
   }
 
