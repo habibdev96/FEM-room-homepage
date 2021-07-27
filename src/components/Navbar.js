@@ -4,6 +4,7 @@ import logo from "../images/logo.svg";
 import NavLink from "./NavLink";
 import Responsive from "../abstracts/Responsive";
 import MobileMenuToggle from "./MobileMenuToggle";
+import MobileMenu from "./MobileMenu";
 
 const Nav = styled.nav`
   position: absolute;
@@ -66,6 +67,7 @@ const Navbar = () => {
         </ul>
         <MobileMenuToggle isActive={isActive} setIsActive={setIsActive} />
       </Container>
+      <MobileMenu isActive={isActive} />
     </Nav>
   );
 };
