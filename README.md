@@ -8,6 +8,7 @@ site: https://fem-room-homepage-challenge.netlify.app/
 - fade in carousel
 - simple mobile menu & toggle
 - responsive design
+- dynamic local data for showcase
 - preloader
 
 #### Technologies used
