@@ -15,6 +15,6 @@ site: https://fem-room-homepage-challenge.netlify.app/
 - react
 - styled components
 
-#### Dependencies
+#### Libraries
 - react-icons
 
